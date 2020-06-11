@@ -43,10 +43,12 @@ public class 1st1Test {
   public void 1st1() {
     driver.get("https://www.instagram.com/");
     driver.findElement(By.cssSelector(".Fifk5 .\\_6q-tv")).click();
-    vars.put("vehicles", js.executeScript("return [\"raunakmaskay\",\"raunakmaskay\"]"));
-    ArrayList collectionVehicles = (ArrayList) vars.get("vehicles");
-    for (int iIterator = 0; i < collectionVehicles.size() - 1; iIterator++) {
-      vars.put("iterator", collectionVehicles.get(i));
+    
+    //Place your list in array below seperated by commas.
+    vars.put("listValues", js.executeScript("return [\"raunakmaskay\",\"raunakmaskay\"]"));
+    ArrayList collectionlistValues = (ArrayList) vars.get("listValues");
+    for (int iIterator = 0; i < collectionlistValues.size() - 1; iIterator++) {
+      vars.put("iterator", collectionlistValues.get(i));
       vars.put("myvar", "myitems");
       driver.findElement(By.cssSelector(".TqC_a")).click();
       driver.findElement(By.cssSelector(".XTCLo")).sendKeys(vars.get("iterator").toString());
